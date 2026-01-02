@@ -6,9 +6,14 @@ const navbarLinks = [
         path: "/",
     },
     {
+        name: "Guarda più tardi",
+        path: "/watchlist",
+    },
+    {
         name: "Cerca",
         path: "/search",
     },
+
 ]
 
 export default function Header() {

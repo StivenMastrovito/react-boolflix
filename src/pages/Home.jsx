@@ -9,6 +9,10 @@ const navbarLinks = [
         path: "/",
     },
     {
+        name: "Guarda più tardi",
+        path: "/watchlist",
+    },
+    {
         name: "Cerca",
         path: "/search",
     },
@@ -23,7 +27,6 @@ export default function Home() {
     useEffect(() => {
         axios.get(`https://api.themoviedb.org/3/movie/784651?api_key=${keyApi}`).then((resp) => {
             setHeroFilm(resp.data);
-
         })
         axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${keyApi}`).then((resp) => {
             setPopolarFilms(resp.data.results)
@@ -69,7 +72,7 @@ export default function Home() {
                             {popolarFilms.map((film) => (
                                 <Link to={`/film/${film.id}`}  key={film.id} className={style.card}>
                                     <div className={style.card_img}>
-                                        <img src={`https://image.tmdb.org/t/p/w342${film.backdrop_path}`} alt="" />
+                                        <img src={`https://image.tmdb.org/t/p/w342${film.poster_path}`} alt="" />
                                     </div>
                                     <div className={style.card_body}>
                                         <p>{film.title}</p>
@@ -91,7 +94,7 @@ export default function Home() {
                             {topRatedFilms.map((film) => (
                                 <Link to={`/film/${film.id}`}  key={film.id} className={style.card}>
                                     <div className={style.card_img}>
-                                        <img src={`https://image.tmdb.org/t/p/w342${film.backdrop_path}`} alt="" />
+                                        <img src={`https://image.tmdb.org/t/p/w342${film.poster_path}`} alt="" />
                                     </div>
                                     <div className={style.card_body}>
                                         <p>{film.title}</p>
@@ -113,7 +116,7 @@ export default function Home() {
                             {upcomingFilms.map((film) => (
                                 <Link to={`/film/${film.id}`} key={film.id} className={style.card}>
                                     <div className={style.card_img}>
-                                        <img src={`https://image.tmdb.org/t/p/w342${film.backdrop_path}`} alt="" />
+                                        <img src={`https://image.tmdb.org/t/p/w342${film.poster_path}`} alt="" />
                                     </div>
                                     <div className={style.card_body}>
                                         <p>{film.title}</p>

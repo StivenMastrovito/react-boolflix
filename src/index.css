@@ -17,6 +17,9 @@ a{
     color: inherit;
 }
 
+body{
+    background-color: rgb(27, 24, 30);
+}
 
 
 /* UTILITYS */
@@ -28,6 +31,21 @@ a{
     width: 80%;
     margin: 0 auto;
 }
+.relative{
+    position: relative;
+}
 .flex{
     display: flex;
+}
+
+
+/* WRAPPER-NOTFOUND */
+.wrapper{
+    display: flex;
+    background-color: red;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }

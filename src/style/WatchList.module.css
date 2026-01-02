@@ -1,0 +1,115 @@
+.main {
+    background: linear-gradient(0deg, rgba(27, 24, 30, 1) 76%, rgb(27 20 30) 89%, rgb(0 0 0 / 0%) 99%);
+    padding-top: 71.2px;
+    padding-bottom: 50px;
+    color: white;
+
+}
+
+.list {
+    margin-top: 30px;
+}
+
+.title {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title_empty {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    flex-direction: column;
+}
+
+.card {
+    width: 100%;
+    background-color: rgb(18, 18, 18);
+    display: flex;
+}
+
+.card_img {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_body {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px;
+    width: 75%;
+}
+
+.film_title{
+    font-size: 2.5rem;
+}
+
+.valutation{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.body_header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.body_footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.film_info {
+    display: flex;
+    gap: 20px;
+}
+
+.card_body p {
+    text-align: center;
+}
+
+.overview{
+    margin-top: 30px;
+}
+.genres{
+    margin-top: 5px;
+}
+.remove_watchList{
+    text-decoration: underline;
+    color: red;
+    cursor: pointer;
+    
+}
+.play {
+    background-color: red;
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 3px 4px 9px black;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1rem;
+}

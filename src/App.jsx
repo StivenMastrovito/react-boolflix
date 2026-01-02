@@ -4,20 +4,28 @@ import './App.css'
 import Home from './pages/Home.jsx'
 import Cerca from './pages/Cerca.jsx'
 import Film from './pages/Film.jsx'
+import NotFound from './pages/NotFound.jsx'
+import { WatchListProvider } from './context/WatchListContext.jsx'
+import WatchList from './pages/WatchList.jsx'
 
 function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <Routes>
+      <WatchListProvider>
+        <BrowserRouter>
+          <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/film/:id' element={<Film />} />
-          <Route element={<DefaultLayout />}>
-            <Route path='/search' element={<Cerca />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+            <Route element={<DefaultLayout />}>
+              <Route path='/watchlist' element={<WatchList />} />
+              <Route path='/film/:id' element={<Film />} />
+              <Route path='/search' element={<Cerca />} />
+            </Route>
+            <Route path='*' element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </WatchListProvider>
+
     </>
   )
 }
